@@ -40,7 +40,7 @@
 {% endif %}
 
   {{ page.content | safe }}
-  {% if not config.base_url is containing("127.0.0.1") %}
+  {% if "127.0.0.1" not in config.base_url %}
 	{% if page.extra.comments is not defined or page.extra.comments != false %}
 		<script src="https://giscus.app/client.js"
 				data-repo="jamesravi/blog-comments"
